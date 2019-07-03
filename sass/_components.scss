@@ -113,10 +113,23 @@
 	list-style: none;
 	margin-top: 3.5rem;
 
+	@media only screen and (max-width: $bp-medium) {
+		display: flex;
+		margin: 0;
+	}
+
 	&__item {
 		position: relative;
 		&:not(:last-child) {
 			margin-bottom: 0.5rem;
+
+			@media only screen and (max-width: $bp-medium) {
+				margin: 0;
+			}
+		}
+
+		@media only screen and (max-width: $bp-medium) {
+			flex: 1;
 		}
 
 		&::before {
@@ -155,6 +168,11 @@
 		display: flex;
 		align-items: center;
 		z-index: 1;
+
+		@media only screen and (max-width: $bp-medium) {
+			justify-content: center;
+			padding: 2rem;
+		}
 	}
 
 	&__link:hover {
@@ -173,6 +191,10 @@
 	color: var(--color-grey-light-4);
 	text-align: center;
 	padding: 2.5rem;
+
+	@media only screen and (max-width: $bp-medium) {
+		display: none;
+	}
 }
 
 .gallery {
@@ -340,6 +362,7 @@
 	}
 
 	&__friends {
+		display: flex;
 	}
 
 	&__photo {
@@ -350,7 +373,7 @@
 		border: 3px solid #fff;
 
 		&:not(:last-child) {
-			margin-right: -1.5rem;
+			margin-right: -2rem;
 		}
 	}
 }
@@ -363,6 +386,11 @@
 	z-index: 10;
 	position: relative;
 	overflow: hidden;
+
+	@media only screen and (max-width: $bp-medium) {
+		padding: 2rem;
+		margin-bottom: 3rem;
+	}
 
 	&__text {
 		margin-bottom: 2rem;
@@ -426,6 +454,10 @@
 		font-weight: 300;
 		margin-bottom: 2.5rem;
 		text-transform: uppercase;
+	}
+
+	@media only screen and (max-width: $bp-medium) {
+		padding: 2.5rem 0;
 	}
 }
 
